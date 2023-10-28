@@ -33,138 +33,104 @@ public class CancelFlight extends Flights{
     }
 
     public void One_Cancel(){
-        try{
-            File file=new File("OneUser.txt");
-            FileWriter fw=new FileWriter(file,true);
-            fw.write(flightNumber);
-            fw.write(" ");
-            fw.write(start);
-            fw.write(" ");
-            fw.write(stop);
-            fw.write(" ");
-            fw.write(startTime);
-            fw.write(" ");
-            fw.write(stopTime);
-            fw.write("\n");
-            fw.close();
-            System.out.println("                                                 Your available flights are: ");
+        File file = new File("OneUser.txt");
+        System.out.println("                                                 Your available flights are: ");
+        System.out.println();
+        System.out.println("                                                 --------------------------------------------------------");
+        System.out.print("                                                 Flight No:" + flightNumber + "   Flying From:" + start + "   Flying to:" + stop + "\n" + "                                                 Date & Time:" + startTime + "    Arrival:" + stopTime + "\n");
+        System.out.println("                                                 --------------------------------------------------------");
+        System.out.println();
+        System.out.print("                                                 Are you sure you want to cancel this flight? (Y/N):");
+        Scanner sc=new Scanner(System.in);
+        String N=sc.next();
+        if(N.equals("Y")){
+            final boolean delete = file.delete();
             System.out.println();
-            System.out.println("                                                 --------------------------------------------------------");
-            System.out.print("                                                 Flight No:" + flightNumber + "   Flying From:" + start + "   Flying to:" + stop + "\n" + "                                                 Date & Time:" + startTime + "    Arrival:" + stopTime + "\n");
-            System.out.println("                                                 --------------------------------------------------------");
+            System.out.println("                                                 Your flight has been cancelled successfully.");
             System.out.println();
-            System.out.print("                                                 Are you sure you want to cancel this flight? (Y/N):");
-            Scanner sc=new Scanner(System.in);
-            String N=sc.next();
-            if(N.equals("Y")){
-                System.out.println();
-                System.out.println("                                                 Your flight has been cancelled successfully.");
-                System.out.println();
-                System.out.println("                                                 Thank you for using our AirLine.");
-                System.out.println("                                                 -----------------------------------------------------");
-                System.out.println("                                                 For Main-Menu press 1!");
-                System.out.println("                                                 For Exit press 2!");
-                System.out.print("                                                 Enter your choice:");
-                int choice=sc.nextInt();
-                System.out.println();
-                if(choice==1){
-                    UserSign menu=new UserSign();
-                    menu.menu();
-                }
-                else{
-                    System.out.println("                                                 Thank You For Using our AirLine.");
-                    System.exit(0);
-                }
+            System.out.println("                                                 Thank you for using our AirLine.");
+            System.out.println("                                                 -----------------------------------------------------");
+            System.out.println("                                                 For Main-Menu press 1!");
+            System.out.println("                                                 For Exit press 2!");
+            System.out.print("                                                 Enter your choice:");
+            int choice=sc.nextInt();
+            System.out.println();
+            if(choice==1){
+                UserSign menu=new UserSign();
+                menu.menu();
+            }
+            else{
+                System.out.println("                                                 Thank You For Using our AirLine.");
+                System.exit(0);
+            }
+        }
+        else{
+            System.out.println();
+            System.out.println("                                                 Your flight has not been cancelled.");
+            System.out.println("                                                 -----------------------------------------------------");
+            System.out.println("                                                 For Main-Menu press 1!");
+            System.out.println("                                                 For Exit press 2!");
+            System.out.print("                                                 Enter your choice:");
+            int choice=sc.nextInt();
+            System.out.println();
+            if(choice==1){
+                UserSign menu=new UserSign();
+                menu.menu();
             }
             else{
                 System.out.println();
-                System.out.println("                                                 Your flight has not been cancelled.");
-                System.out.println("                                                 -----------------------------------------------------");
-                System.out.println("                                                 For Main-Menu press 1!");
-                System.out.println("                                                 For Exit press 2!");
-                System.out.print("                                                 Enter your choice:");
-                int choice=sc.nextInt();
-                System.out.println();
-                if(choice==1){
-                    UserSign menu=new UserSign();
-                    menu.menu();
-                }
-                else{
-                    System.out.println();
-                    System.out.println("                                                 Thank You For Using our AirLine.");
-                    System.exit(0);
-                }
+                System.out.println("                                                 Thank You For Using our AirLine.");
+                System.exit(0);
             }
-        }catch (IOException e){
-            System.out.println();
-            System.out.println("                                                 File Writing Error Found!");
         }
     }
     public void Round_Cancel(){
-        try{
-            File file=new File("RoundUser.txt");
-            FileWriter fw=new FileWriter(file,true);
-            fw.write(flightNumber);
-            fw.write(" ");
-            fw.write(start);
-            fw.write(" ");
-            fw.write(via);
-            fw.write(" ");
-            fw.write(stop);
-            fw.write(" ");
-            fw.write(startTime);
-            fw.write(" ");
-            fw.write(stopTime);
-            fw.write("\n");
-            fw.close();
-            System.out.println("                                                 Your available flights are: ");
-            System.out.println("                                                 -------------------------------------------------------------------");
-            System.out.println("                                                 No:" + flightNumber + "     Flying From:" + start + "      Via:" + via + "      Flying to:" + stop + "\n" + "                                                 Date & Time:" + startTime + "        Arrival:" + stopTime + "\n");
-            System.out.println("                                                 -------------------------------------------------------------------");
-            System.out.print("                                                 Are you sure you want to cancel this flight? (Y/N):");
-            Scanner sc=new Scanner(System.in);
-            String N=sc.next();
-            if(N.equals("Y")){
-                System.out.println();
-                System.out.println("                                                 Your flight has been cancelled successfully.");
-                System.out.println("                                                 -----------------------------------------------------");
-                System.out.println("                                                 For Main-Menu press 1!");
-                System.out.println("                                                 For Exit press 2!");
-                System.out.print("                                                 Enter your choice:");
-                int choice=sc.nextInt();
-                if(choice==1){
-                    UserSign menu=new UserSign();
-                    menu.menu();
-                }
-                else{
-                    System.out.println();
-                    System.out.println("                                                 Thank You For Using our AirLine.");
-                    System.exit(0);
-                }
+        File file = new File("RoundUser.txt");
+        System.out.println("                                                 Your available flights are: ");
+        System.out.println("                                                 -------------------------------------------------------------------");
+        System.out.println("                                                 No:" + flightNumber + "     Flying From:" + start + "      Via:" + via + "      Flying to:" + stop + "\n" + "                                                 Date & Time:" + startTime + "        Arrival:" + stopTime + "\n");
+        System.out.println("                                                 -------------------------------------------------------------------");
+        System.out.print("                                                 Are you sure you want to cancel this flight? (Y/N):");
+        Scanner sc=new Scanner(System.in);
+        String N=sc.next();
+        if(N.equals("Y")){
+            final boolean delete = file.delete();
+            System.out.println();
+            System.out.println("                                                 Your flight has been cancelled successfully.");
+            System.out.println("                                                 -----------------------------------------------------");
+            System.out.println("                                                 For Main-Menu press 1!");
+            System.out.println("                                                 For Exit press 2!");
+            System.out.print("                                                 Enter your choice:");
+            int choice=sc.nextInt();
+            if(choice==1){
+                UserSign menu=new UserSign();
+                menu.menu();
             }
             else{
-                System.out.println("                                                 Your flight has not been cancelled.");
-                System.out.println("                                                 -----------------------------------------------------");
-                System.out.println("                                                 For Main-Menu press 1!");
-                System.out.println("                                                 For Exit press 2!");
-                System.out.print("                                                 Enter your choice:");
-                int choice=sc.nextInt();
                 System.out.println();
-                if(choice==1){
-                    UserSign menu=new UserSign();
-                    menu.menu();
-                }
-                else{
-                    System.out.println();
-                    System.out.println("                                                 Thank You For Using our AirLine.");
-                    System.exit(0);
-                }
+                System.out.println("                                                 Thank You For Using our AirLine.");
+                System.exit(0);
             }
-
-        }catch (IOException e){
-            System.out.println();
-            System.out.println("                                                 File Writing Error Found!");
         }
+        else{
+            System.out.println("                                                 Your flight has not been cancelled.");
+            System.out.println("                                                 -----------------------------------------------------");
+            System.out.println("                                                 For Main-Menu press 1!");
+            System.out.println("                                                 For Exit press 2!");
+            System.out.print("                                                 Enter your choice:");
+            int choice=sc.nextInt();
+            System.out.println();
+            if(choice==1){
+                UserSign menu=new UserSign();
+                menu.menu();
+            }
+            else{
+                System.out.println();
+                System.out.println("                                                 Thank You For Using our AirLine.");
+                System.exit(0);
+            }
+        }
+
     }
     public void cancel(){
         Scanner sc=new Scanner(System.in);
@@ -220,6 +186,7 @@ public class CancelFlight extends Flights{
                 Scanner sc=new Scanner(System.in);
                 String N=sc.next();
                 if(N.equals("Y")){
+                    final boolean delete = file.delete();
                     System.out.println();
                     System.out.println("                                                 Your flight has been cancelled successfully.");
                     System.out.println("                                                 -----------------------------------------------------");
@@ -260,7 +227,10 @@ public class CancelFlight extends Flights{
             }
         }catch(FileNotFoundException e){
             System.out.println();
-            System.out.println("                                                 File Not Found!");
+            System.out.println("                                                 No Reservation Found!");
+            System.out.println();
+            UserSign menu=new UserSign();
+            menu.menu();
         }
 
     }
@@ -286,6 +256,7 @@ public class CancelFlight extends Flights{
                 String N=sc.next();
                 System.out.println();
                 if(N.equals("Y")){
+                    final boolean delete = file.delete();
                     System.out.println("                                                 Your flight has been cancelled successfully.");
                     System.out.println("                                                 -----------------------------------------------------");
                     System.out.println("                                                 For Main-Menu press 1!");
@@ -324,7 +295,10 @@ public class CancelFlight extends Flights{
             }
         }catch(FileNotFoundException e){
             System.out.println();
-            System.out.println("                                                 File Not Found!");
+            System.out.println("                                                 No Reservation Found!");
+            System.out.println();
+            UserSign menu=new UserSign();
+            menu.menu();
         }
     }
 

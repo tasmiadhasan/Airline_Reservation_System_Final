@@ -1,5 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
 import java.util.Scanner;
 
 public class Passenger {
@@ -72,6 +73,23 @@ public class Passenger {
                     stop = to;
                     startTime = ftime;
                     stopTime = freach;
+                    try{
+                        File file1=new File("OneUser.txt");
+                    FileWriter fw=new FileWriter(file1,true);
+                    fw.write(flightNumber);
+                    fw.write(" ");
+                    fw.write(start);
+                    fw.write(" ");
+                    fw.write(stop);
+                    fw.write(" ");
+                    fw.write(startTime);
+                    fw.write(" ");
+                    fw.write(stopTime);
+                    fw.write("\n");
+                    fw.close();
+                    }catch (Exception e){
+                        System.out.println("                                                 File not Found!");
+                    }
 
                 }
             }scanner.close();
@@ -139,6 +157,25 @@ public class Passenger {
                     stop = sp;
                     startTime = start_time;
                     stopTime = stop_time;
+                    try{
+                        File file1=new File("RoundUser.txt");
+                        FileWriter fw=new FileWriter(file1,true);
+                        fw.write(flightNumber);
+                        fw.write(" ");
+                        fw.write(start);
+                        fw.write(" ");
+                        fw.write(via);
+                        fw.write(" ");
+                        fw.write(stop);
+                        fw.write(" ");
+                        fw.write(startTime);
+                        fw.write(" ");
+                        fw.write(stopTime);
+                        fw.write("\n");
+                        fw.close();
+                    }catch (Exception e){
+                        System.out.println("                                                 File not Found!");
+                    }
                 }
             }scanner.close();
         }catch(FileNotFoundException e){
