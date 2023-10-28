@@ -28,12 +28,14 @@ public class Flights {
         this.stopTime = stopTime;
     }
     public void one() {
-        System.out.println("                                           Flight No:" + flightNumber + "   Flying From:" + start + "   Flying to:" + stop + "\n" + "                                           Date & Time:" + startTime + "    Arrival:" + stopTime + "\n");
-    }
+        System.out.println("                                                 --------------------------------------------------------");
+       System.out.print("                                                 Flight No:" + flightNumber + "   Flying From:" + start + "   Flying to:" + stop + "\n" + "                                                 Date & Time:" + startTime + "    Arrival:" + stopTime + "\n");
+   }
 
     public void round() {
-        System.out.println("                                           No:" + flightNumber + "     Flying From:" + start + "      Via:" + via + "      Flying to:" + stop + "\n" + "                                           Date & Time:" + startTime + "        Arrival:" + stopTime + "\n");
-    }
+        System.out.println("                                                 -------------------------------------------------------------------");
+        System.out.print("                                                 No:" + flightNumber + "     Flying From:" + start + "      Via:" + via + "      Flying to:" + stop + "\n" + "                                                 Date & Time:" + startTime + "        Arrival:" + stopTime + "\n");
+   }
     Passenger passenger=new Passenger();
 
     public void Dhaka_Tokyo() {
@@ -50,7 +52,8 @@ public class Flights {
                 flight.one();
             }scanner.close();
         }catch(FileNotFoundException e){
-            System.out.println(e);
+            System.out.println();
+            System.out.println("                                                 File not Found!");
         }
 
         passenger.userInfo();
@@ -70,7 +73,8 @@ public class Flights {
                 flight.one();
             }scanner.close();
         }catch(FileNotFoundException e){
-            System.out.println(e);
+            System.out.println();
+            System.out.println("                                                 File not Found!");
         }
         passenger.userInfo();
         passenger.One_FlightCheck();
@@ -89,7 +93,8 @@ public class Flights {
                 flight.one();
             }scanner.close();
         }catch(FileNotFoundException e){
-            System.out.println(e);
+            System.out.println();
+            System.out.println("                                                 File not Found!");
         }
         passenger.userInfo();
         passenger.One_FlightCheck();
@@ -108,7 +113,8 @@ public class Flights {
                 flight.one();
             }scanner.close();
         }catch(FileNotFoundException e){
-            System.out.println(e);
+            System.out.println();
+            System.out.println("                                                 File not Found!");
         }
         passenger.userInfo();
         passenger.One_FlightCheck();
@@ -127,7 +133,8 @@ public class Flights {
                 flight.one();
             }scanner.close();
         }catch(FileNotFoundException e){
-            System.out.println(e);
+            System.out.println();
+            System.out.println("                                                 File not Found!");
         }
         passenger.userInfo();
         passenger.One_FlightCheck();
@@ -147,7 +154,8 @@ public class Flights {
                 flight.round();
             }scanner.close();
         }catch(FileNotFoundException e){
-            System.out.println(e);
+            System.out.println();
+            System.out.println("                                                 File not Found!");
         }
         passenger.userInfo();
         passenger.Round_FlightCheck();
@@ -167,7 +175,8 @@ public class Flights {
                 flight.round();
             }scanner.close();
         }catch(FileNotFoundException e){
-            System.out.println(e);
+            System.out.println();
+            System.out.println("                                                 File not Found!");
         }
         passenger.userInfo();
         passenger.Round_FlightCheck();
@@ -187,7 +196,8 @@ public class Flights {
                 flight.round();
             }scanner.close();
         }catch(FileNotFoundException e){
-            System.out.println(e);
+            System.out.println();
+            System.out.println("                                                 File not Found!");
         }
         passenger.userInfo();
         passenger.Round_FlightCheck();
@@ -207,7 +217,8 @@ public class Flights {
                 flight.round();
             }scanner.close();
         }catch(FileNotFoundException e){
-            System.out.println(e);
+            System.out.println();
+            System.out.println("                                                 File not Found!");
         }
         passenger.userInfo();
         passenger.Round_FlightCheck();
@@ -226,7 +237,8 @@ public class Flights {
                 flight.one();
             }scanner.close();
         }catch(FileNotFoundException e){
-            System.out.println(e);
+            System.out.println();
+            System.out.println("                                                 File not Found!");
         }
     }
     public void Round_all_Flight(){
@@ -244,7 +256,8 @@ public class Flights {
                 flight.round();
             }scanner.close();
         }catch(FileNotFoundException e){
-            System.out.println(e);
+            System.out.println();
+            System.out.println("                                                 File not Found!");
         }
     }
 }
