@@ -223,41 +223,4 @@ public class Flights {
         passenger.userInfo();
         passenger.Round_FlightCheck();
     }
-    public void One_all_Flight(){
-        try {
-            File file = new File("One_Flights.txt");
-            Scanner scanner = new Scanner(file);
-            while (scanner.hasNext()) {
-                String flight_num = scanner.next();
-                String start = scanner.next();
-                String stop = scanner.next();
-                String start_time = scanner.next();
-                String stop_time = scanner.next();
-                Flights flight = new Flights(flight_num, start, stop, start_time, stop_time);
-                flight.one();
-            }scanner.close();
-        }catch(FileNotFoundException e){
-            System.out.println();
-            System.out.println("                                                 File not Found!");
-        }
-    }
-    public void Round_all_Flight(){
-        try {
-            File file = new File("Round_Flights.txt");
-            Scanner scanner = new Scanner(file);
-            while (scanner.hasNext()) {
-                String flight_num = scanner.next();
-                String start = scanner.next();
-                String via = scanner.next();
-                String stop = scanner.next();
-                String start_time = scanner.next();
-                String stop_time = scanner.next();
-                Flights flight = new Flights(flight_num, start, via, stop, start_time, stop_time);
-                flight.round();
-            }scanner.close();
-        }catch(FileNotFoundException e){
-            System.out.println();
-            System.out.println("                                                 File not Found!");
-        }
-    }
 }
