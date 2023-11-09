@@ -227,8 +227,19 @@ public class CancelFlight extends Flights{
             System.out.println();
             System.out.println("                                                 No Reservation Found!");
             System.out.println();
-            UserSign menu=new UserSign();
-            menu.menu();
+            System.out.println("                                                 For Main-Menu Press 1");
+            System.out.println("                                                 And For EXIT Press 0");
+            System.out.print("                                                 Enter your Choice:");
+            Scanner sc=new Scanner(System.in);
+            int press=sc.nextInt();
+            if(press==1){
+                UserSign menu=new UserSign();
+                menu.menu();
+            } else if(press==0) {
+                System.exit(0);
+                System.out.println("                                                 Thank You for Choosing Our Airline");
+            }
+            System.out.println();
         }
 
     }
@@ -295,8 +306,20 @@ public class CancelFlight extends Flights{
             System.out.println();
             System.out.println("                                                 No Reservation Found!");
             System.out.println();
-            UserSign menu=new UserSign();
-            menu.menu();
+            System.out.println("                                                 For Main-Menu Press 1");
+            System.out.println("                                                 And For EXIT Press 0");
+            System.out.print("                                                 Enter your Choice:");
+            Scanner sc=new Scanner(System.in);
+            int press=sc.nextInt();
+            if(press==1){
+                UserSign menu=new UserSign();
+                menu.menu();
+            } else if(press==0) {
+                System.exit(0);
+                System.out.println("                                                 Thank You for Choosing Our Airline");
+            }
+            System.out.println();
+
         }
     }
 

@@ -34,11 +34,11 @@ public class Passenger {
         phone = scan.next();
         System.out.print("                                                 Enter your Address: ");
         address = scan.next();
+        System.out.println("                                                 Business Class Price: 50000 BDT");
+        System.out.println("                                                 Economy Class Price: 30000 BDT");
         System.out.print("                                                 Enter Quantity of tickets: ");
         tickets = scan.nextInt();
         scan.nextLine();
-        System.out.println("                                                 Business Class Price: 50000 BDT");
-        System.out.println("                                                 Economy Class Price: 30000 BDT");
         System.out.print("                                                 Enter class (Business/Economy): ");
         classtype = scan.next();
         int price;
